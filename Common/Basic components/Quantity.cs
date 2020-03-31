@@ -2,11 +2,11 @@
 
 namespace Infrastructure
 {
-    public class Quantity : ComppenantBase
+    public class Quantity : ComponentBase
     {
-        public IWebElement QuantityIncrease => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center"));
-        public IWebElement QuantityDecrease => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center"));
-        public IWebElement QuantityByNumber => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center"));
+        public IWebElement QuantityIncrease => parentElement.FindElement(By.CssSelector(".cart_quantity_input.form-control.grey"));
+        public IWebElement QuantityDecrease => parentElement.FindElement(By.CssSelector(".cart_quantity_button.clearfix .button-minus"));
+        public IWebElement QuantityByNumber => parentElement.FindElement(By.CssSelector(".cart_quantity_button.clearfix .button-plus"));
 
         public Quantity(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {

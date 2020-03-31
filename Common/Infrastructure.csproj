@@ -48,29 +48,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Basic comppenants\Filters.cs" />
+    <Compile Include="Basic components\Filters.cs" />
     <Compile Include="BasicAbstractClasses\BasePage.cs" />
-    <Compile Include="Basic comppenants\Button.cs" />
-    <Compile Include="Basic comppenants\ColumnsContainer.cs" />
+    <Compile Include="Basic components\Button.cs" />
+    <Compile Include="Basic components\ColumnsContainer.cs" />
     <Compile Include="Basic pages\CartPage.cs" />
     <Compile Include="Basic pages\CatalogPage.cs" />
-    <Compile Include="Basic comppenants\CartTable.cs" />
-    <Compile Include="Basic comppenants\ColorRow.cs" />
-    <Compile Include="ReadyForChange.cs" />
-    <Compile Include="BasicAbstractClasses\ComppenantBase.cs" />
+    <Compile Include="Basic components\CartTable.cs" />
+    <Compile Include="Basic components\ColorRow.cs" />
+    <Compile Include="BasicAbstractClasses\ComponentBase.cs" />
     <Compile Include="BasicAbstractClasses\DriverUser.cs" />
-    <Compile Include="Basic comppenants\FooterContainer.cs" />
-    <Compile Include="Basic comppenants\HeaderContainer.cs" />
+    <Compile Include="Basic components\FooterContainer.cs" />
+    <Compile Include="Basic components\HeaderContainer.cs" />
     <Compile Include="Basic pages\HomePage.cs" />
-    <Compile Include="Basic comppenants\BuyingItemWindow.cs" />
-    <Compile Include="Basic comppenants\CatalogCategories.cs" />
-    <Compile Include="Basic comppenants\Item.cs" />
+    <Compile Include="Basic components\BuyingItemWindow.cs" />
+    <Compile Include="Basic components\CatalogCategories.cs" />
+    <Compile Include="Basic components\Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Basic comppenants\TextBox.cs" />
-    <Compile Include="Basic comppenants\Quantity.cs" />
+    <Compile Include="Basic components\TextBox.cs" />
+    <Compile Include="Basic components\Quantity.cs" />
     <Compile Include="Basic pages\ViewItemPage.cs" />
-    <Compile Include="Basic comppenants\ViewItemRow.cs" />
-    <Compile Include="Basic comppenants\QuickViewWindow.cs" />
+    <Compile Include="Basic components\ViewItemRow.cs" />
+    <Compile Include="Basic components\QuickViewWindow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

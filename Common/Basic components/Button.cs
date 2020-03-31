@@ -3,7 +3,7 @@ using System;
 
 namespace Infrastructure
 {
-    public class Button : ComppenantBase
+    public class Button : ComponentBase
     { 
         public Button(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {
@@ -12,8 +12,8 @@ namespace Infrastructure
 
         public T Click<T>()
         {
-            ParentElement.Click();
-            return (T)Activator.CreateInstance(typeof(T), Driver);
+            parentElement.Click();
+            return (T)Activator.CreateInstance(typeof(T), driver);
         }
     }
 }

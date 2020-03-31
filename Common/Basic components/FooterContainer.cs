@@ -2,7 +2,7 @@
 
 namespace Infrastructure
 {
-    public class FooterContainer : ComppenantBase
+    public class FooterContainer : ComponentBase
     {
         public FooterContainer(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {

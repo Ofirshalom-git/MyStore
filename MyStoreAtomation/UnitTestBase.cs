@@ -11,23 +11,23 @@ namespace MyStoreAtomation
     {
         protected HomePage HomePage { get; private set; }
         protected CatalogPage CatalogPage { get; private set; }
-        private IWebDriver Driver { get; set; }
+        private IWebDriver driver { get; set; }
 
 
         [TestInitialize]
         public void Initializer()
         {
-            Driver = new ChromeDriver();
-            Driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
-            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
-            HomePage = new HomePage(Driver);
+            driver = new ChromeDriver();
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+            HomePage = new HomePage(driver);
             CatalogPage = HomePage.GoToCatalogPage();
         }
 
         [TestCleanup]
         public void Clean()
         {
-            Driver.Close();
+            driver.Close();
         }
     }
 }

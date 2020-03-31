@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Infrastructure
 {
-    public class ColorRow : ComppenantBase
+    public class ColorRow : ComponentBase
     {
-        public List<Button> Colors => ParentElement.FindElements(By.CssSelector("ul.color_to_pick_list.clearfix")).Select(element => new Button(Driver, element)).ToList();
+        public List<Button> Colors => parentElement.FindElements(By.CssSelector("ul.color_to_pick_list.clearfix")).Select(element => new Button(driver, element)).ToList();
 
         public ColorRow(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {

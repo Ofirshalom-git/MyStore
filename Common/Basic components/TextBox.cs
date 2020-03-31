@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure
 {
-    public class TextBox : ComppenantBase
+    public class TextBox : ComponentBase
     {
         public TextBox(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {
@@ -15,6 +15,6 @@ namespace Infrastructure
         }
 
         public void Fill(string text) =>        
-            ParentElement.SendKeys(text);                    
+            parentElement.SendKeys(text);                    
     }
 }

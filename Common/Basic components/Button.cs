@@ -12,8 +12,11 @@ namespace Infrastructure
 
         public T Click<T>()
         {
-            parentElement.Click();
-            return (T)Activator.CreateInstance(typeof(T), driver);
+            ParentElement.Click();
+            return (T)Activator.CreateInstance(typeof(T), Driver);
         }
+
+        public bool IsEnabled() =>
+            ParentElement.Enabled;
     }
 }

@@ -4,11 +4,11 @@ namespace Infrastructure
 {
     public abstract class DriverUser
     {
-        protected IWebDriver driver { get; private set; }
+        protected IWebDriver Driver { get; private set; }
 
         public DriverUser(IWebDriver driver)
         {
-            this.driver = driver;
+            Driver = driver;
         }
     }
 }

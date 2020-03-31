@@ -4,11 +4,11 @@ namespace Infrastructure
 {
     public abstract class ComponentBase : DriverUser
     {
-        protected IWebElement parentElement { get; private set; }
+        protected IWebElement ParentElement { get; private set; }
 
         public ComponentBase(IWebDriver driver, IWebElement parentElement) : base(driver)
         {
-            this.parentElement = parentElement;
+            ParentElement = parentElement;
         }
     }
 }

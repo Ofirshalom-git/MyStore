@@ -48,6 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PriceExtensions.cs" />
+    <Compile Include="QuantityExtensions.cs" />
     <Compile Include="WaitExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

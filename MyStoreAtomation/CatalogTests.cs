@@ -10,37 +10,15 @@ namespace MyStoreAtomation
         [TestMethod]
         public void AddToCartButtonPopsTest()
         {
-            var threwExeption = false;
-            try
-            {
-                var button = CatalogPage.Items[0].HoverOnItemByIndex().Items[0].AddToCartButton;
-            }
-
-            catch
-            {
-                threwExeption = true;
-            }
-
-            threwExeption.Should().BeFalse();
+            CatalogPage.Items[0].HoverOnItemByIndex().Items[0].AddToCartButton.IsEnabled().Should().BeTrue();
         }
         
         [TestMethod]
         public void AddToCartButtonDisapearsTest()
         {
-            var threwExeption = false;
-            try
-            {
                 CatalogPage.Items[0].HoverOnItemByIndex();
                 CatalogPage.Items[1].HoverOnItemByIndex();
-                var button = CatalogPage.Items[0].HoverOnItemByIndex().Items[0].AddToCartButton;
-            }
-
-            catch
-            {
-                threwExeption = true;
-            }
-
-            threwExeption.Should().BeTrue();
+                CatalogPage.Items[0].AddToCartButton.IsEnabled().Should().BeFalse();
         }
 
         [TestMethod]
@@ -82,7 +60,7 @@ namespace MyStoreAtomation
             var highestPrice = CatalogPage.Filters.GerPriceRange()[1];
             foreach (var item in CatalogPage.Items)
             {
-                var price = item.GetPrice;
+                var price = item.GetPrice();
                 price.Should().BeGreaterOrEqualTo(lowestPrice);
                 price.Should().BeLessOrEqualTo(highestPrice);
             }
@@ -95,7 +73,7 @@ namespace MyStoreAtomation
             var highestPrice = CatalogPage.Filters.GerPriceRange()[1];
             foreach (var item in CatalogPage.Items)
             {
-                var price = item.GetPrice;
+                var price = item.GetPrice();
                 price.Should().BeGreaterOrEqualTo(lowestPrice);
                 price.Should().BeLessOrEqualTo(highestPrice);
             }

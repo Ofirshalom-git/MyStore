@@ -5,9 +5,9 @@ namespace Infrastructure
 {
     public class CatalogCategories : ComponentBase
     {
-        public Button Women => parentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(driver, element)).ToList()[0];
-        public Button Dresses => parentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(driver, element)).FirstOrDefault(element => element.ToString().ToLower() == "dresses");
-        public Button TShirts => parentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(driver, element)).FirstOrDefault(element => element.ToString().ToLower() == "t-shirts");
+        public Button Women => ParentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(Driver, element)).FirstOrDefault(element => element.ToString().ToLower() == "women");
+        public Button Dresses => ParentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(Driver, element)).FirstOrDefault(element => element.ToString().ToLower() == "dresses");
+        public Button TShirts => ParentElement.FindElements(By.CssSelector("#block_top_menu ul.sf-menu li a.sf-with-ul")).Select(element => new Button(Driver, element)).FirstOrDefault(element => element.ToString().ToLower() == "t-shirts");
 
         public CatalogCategories(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {

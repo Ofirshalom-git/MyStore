@@ -4,9 +4,9 @@ namespace Infrastructure
 {
     public class Quantity : ComponentBase
     {
-        public IWebElement QuantityIncrease => parentElement.FindElement(By.CssSelector(".cart_quantity_input.form-control.grey"));
-        public IWebElement QuantityDecrease => parentElement.FindElement(By.CssSelector(".cart_quantity_button.clearfix .button-minus"));
-        public IWebElement QuantityByNumber => parentElement.FindElement(By.CssSelector(".cart_quantity_button.clearfix .button-plus"));
+        public IWebElement QuantityIncrease => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center .cart_quantity_input"));
+        public IWebElement QuantityDecrease => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center .cart_quantity_down"));
+        public IWebElement QuantityByNumber => ParentElement.FindElement(By.CssSelector(".cart_quantity.text-center .cart_quantity_up"));
 
         public Quantity(IWebDriver driver, IWebElement parentElement) : base(driver, parentElement)
         {
